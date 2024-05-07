@@ -14,12 +14,12 @@
             <nav>
                 <img src="images/kyrie-irving-logo-kenneth-smith-transparent.png" class="logo">
                 <ul id="sidemenu">
-                    <li><a href="#">Anasayfa</a></li>
-                    <li><a href="#">Hakkında</a></li>
-                    <li><a href="#">Özgeçmiş</a></li>
+                    <li><a href="#header">Anasayfa</a></li>
+                    <li><a href="#about">Hakkında</a></li>
+                    <li><a href="#CV">Özgeçmiş</a></li>
                     <li><a href="#">Şehrim</a></li>
                     <li><a href="#">Mirasımız</a></li>
-                    <li><a href="#">iletişim</a></li>
+                    <li><a href="#contact">İletişim</a></li>
                     <li><a href="#">Giriş Yap / Kaydol</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
@@ -27,7 +27,7 @@
             </nav>
             <div class="header-text">
                 <p> Design</p>
-                <h1> Hi, i'm <span>Kerem Yunus Parlakyiğit</span><br> from Eskişehir, Türkiye</h1>
+                <h1> Merhaba<br><span> Kerem Yunus Parlakyiğit</span>'in kişisel<br></s>web sitesine hoşgeldiniz <br> </h1>
             </div>
         </div>
     </div>
@@ -54,9 +54,9 @@
                 </div>
                 <div class="tab-contents" id="Eğitim">
                     <ul>
-                        <li><span>İlköğretim</span><br>Ahmet Sezer İlköğretim Okulu</li>
-                        <li><span>Lise</span><br>Atatürk Lisesi</li>
-                        <li><span>Üniversite</span><br>Sakarya Üniverstesi/Bilgisayar Mühendisliği<br>(devam ediyor)</li>
+                        <li><span>İlköğretim</span><br>Ahmet Sezer İlköğretim Okulu (2011-2019)</li>
+                        <li><span>Lise</span><br>Atatürk Lisesi (2019-2023)</li>
+                        <li><span>Üniversite</span><br>Sakarya Üniverstesi/Bilgisayar Mühendisliği <br> (2023-devam ediyor)</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="Spor Geçmişi">
@@ -71,28 +71,27 @@
             </div>
         </div>
     </div>
-<!------------------services--------------->
+<!------------------hobilerim--------------->
 <div id="about">
     <div class="container">
-        <h1 class="sub-title">Hizmetlerim</h1>
-            <div class="services-list">
+        <h1 class="sub-title">Hobilerim</h1>
+            <div class="hobbies-list">
                 <div>
                     <i class="fa-solid fa-crop"></i>
-                    <h2>Web tasarımı</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, voluptatum assumenda provident 
-                        eius dignissimos sit sequi, nulla molestiae voluptates quasi delectus illo cupiditate sapiente, qui possimus porro iusto. Eos, possimus?</p>
+                    <h2>Spor Yapmak</h2>
+                    <p>Küçüklüğümden beri sporla iç içe oldum, birçok erkek çocuk gibi futbolla başlayan spor serüvenim sonrasında yüzme, tekvando, basketbol ve fitness ile devam etti.
+                    şu anda amatör olarak basketbol ve fitness ile ilgilenmeye devam ediyorum.</p>
                     <a href="#">Daha fazlasını öğrenin</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-computer"></i>
-                    <h2>Uygulama Geliştirme Windows İçin</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, voluptatum assumenda provident 
-                        eius dignissimos sit sequi, nulla molestiae voluptates quasi delectus illo cupiditate sapiente, qui possimus porro iusto. Eos, possimus?</p>
+                    <h2>Müzik Dinlemek</h2>
+                    <p>Müzik dinlemek gün içinde bolca yer verdiğim aktivitelerden birisi</p>
                     <a href="#">Daha fazlasını öğrenin</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-dumbbell"></i><i> </i><i class="fa-solid fa-bowl-food"></i>
-                    <h2>Spor/Beslenme Programı</h2>
+                    <h2>Dizi/Film izlemek</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, voluptatum assumenda provident 
                         eius dignissimos sit sequi, nulla molestiae voluptates quasi delectus illo cupiditate sapiente, qui possimus porro iusto. Eos, possimus?</p>
                     <a href="#">Daha fazlasını öğrenin</a>
@@ -101,7 +100,6 @@
         </div>
     </div> 
 <!-- ------------contact-------------- -->
-<div id="contact">
     <div class="container">
         <div class="row">
             <div class="contact-left">
@@ -115,10 +113,10 @@
         </div>
     </div>
         <div class="contact-right">
-            <form>
+            <form name="submit-to-google-sheet">
                 <input type="text" name="İsim" placeholder="İsminiz" required>
                 <input type="email" name="email" placeholder="e-mail adresiniz" required>
-                <textarea name="Message" rows="6" placeholder="Mesajınız"></textarea>
+                <textarea name="Mesaj" rows="6" placeholder="Mesajınız"></textarea>
                 <button type="submit" class="btn btn2">Gönder</button>
                </form>
               </div>
@@ -156,5 +154,19 @@
      }
 
 </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwG6uA6mVnjpKjQWEL6SVV2_anGrh_osDcJ5jK4xZGPlIFcKsilW5ZFul7CJvHp-5Qt/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
 </body>
 </html>
