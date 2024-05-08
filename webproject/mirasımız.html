@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Portfolio Website</title>
+    <link rel="stylesheet" href="stylemirasimiz.css">
+    <script src="https://kit.fontawesome.com/27c32d15b7.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/kyrie-irving-logo-kenneth-smith-transparent.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li><a href="hakkinda.html">Hakkında</a></li>
+                    <li><a href="cv.html">Özgeçmiş</a></li>
+                    <li><a href="sehrimiz.html">Şehrim</a></li>
+                    <li><a href="mirasımız.html">Mirasımız</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                    <li><a href="kaydol.html">Giriş Yap / Kaydol</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+    <script>
+     var sidemeu = document.getElementById("sidemenu");
+
+
+     function openmenu(){
+        sidemeu.style.right="0";
+     }
+     function closemenu(){
+        sidemeu.style.right="-200px";
+     }
+
+</script>
+</body>
+
+</html>
