@@ -10,9 +10,45 @@ body{
 }
 #header{
     width: 100%;
-    height: 100vh;
+    height: 100px;
     background-size:cover;
     background-position: center;
+}
+.header-text h1{
+    margin-left: 50px;
+    color: rgb(255, 0, 0);
+}
+.header-text h4{
+    margin-left: 75px;
+    font-size: 25px;
+    margin-top: 30px;
+    color: red;
+}
+.header-text h5{
+    margin-left: 90px;
+    font-size: 20px;
+    margin-top: 30px;
+    color: red;
+
+}
+
+.header-text p{
+    color: #fff;
+    margin-left: 125px;
+    text-indent: 10px   ;
+    margin-right: 15px;
+    
+}
+.header-text ul li{
+    color: #fff;
+    margin-left: 125px;
+    text-indent: 10px   ;
+    margin-right: 15px;
+
+}
+.header-text ol li{
+    color: #fff;
+    margin-left: 125px;
 }
 .container{
     padding: 10px 10%;
@@ -54,6 +90,21 @@ nav ul li a:hover::after {
 /*-----------------css for small screen------------*/
 nav .fa-solid{
     display: none;
+}
+.carousel {
+    height: fit-content;
+    max-width: 800px; /* istediğin genişlik değerini belirle */
+    margin-top:  500px;
+    margin-left: 350px;
+}
+
+.carousel-item img {
+    width: 100%;  /* resimlerin slider genişliğine tam olarak oturmasını sağlar */
+    height: auto; /* oranları korumak için */
+}
+
+.carousel-item {
+    text-align: center; /* resimlerin dikey hizalanmasını sağlar */
 }
 
 @media only screen and (max-width:600px){
