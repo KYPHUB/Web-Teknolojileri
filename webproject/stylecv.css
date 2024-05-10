@@ -10,7 +10,7 @@ body{
 }
 #header{
     width: 100%;
-    height: 100vh;
+    height:90px;
     background-size:cover;
     background-position: center;
 }
@@ -25,6 +25,7 @@ nav{
 }
 .logo{
     width: 70px;
+    margin-left:15px ;
 }
 nav ul li{
     display: inline-block;
@@ -55,6 +56,24 @@ nav ul li a:hover::after {
 nav .fa-solid{
     display: none;
 }
+.list-group-numbered {
+    margin-top: 10px; /* Öğelerin üstündeki boşluğu ayarla */
+    margin-bottom: 20px; /* Öğelerin altındaki boşluğu ayarla */
+    background: gray   !important  ;
+    background-color: gray;
+    color: gray;
+    border-radius: 15px;
+}
+
+.list-group-numbered, .list-group-item {
+    padding: 10px; /* Öğe içindeki içeriğin etrafındaki boşluğu ayarla */
+    background-color: rgb(187, 178, 178);
+        
+}
+.list-group-item{
+    font-size: 16px;
+}
+
 
 @media only screen and (max-width:600px){
 

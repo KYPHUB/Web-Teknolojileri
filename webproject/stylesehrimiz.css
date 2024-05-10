@@ -16,7 +16,9 @@ body{
 }
 .header-text h1{
     margin-left: 50px;
-    color: rgb(255, 0, 0);
+    color:rgb(106, 35, 248);
+    font-size: 50px;
+
 }
 .header-text h4{
     margin-left: 75px;
@@ -28,7 +30,7 @@ body{
     margin-left: 90px;
     font-size: 20px;
     margin-top: 30px;
-    color: red;
+    color: rgb(64, 158, 64);
 
 }
 
@@ -94,7 +96,8 @@ nav .fa-solid{
 .carousel {
     height: fit-content;
     max-width: 800px; /* istediğin genişlik değerini belirle */
-    margin-top:  500px;
+    margin-top:  100px;
+    margin-bottom: 300px;
     margin-left: 350px;
 }
 

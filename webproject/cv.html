@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kişisel Portfolio Website</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="stylecv.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/27c32d15b7.js" crossorigin="anonymous"></script>
-   
+
 </head>
+
 <body>
     <div id="header">
         <div class="container">
@@ -29,18 +33,49 @@
             </nav>
         </div>
     </div>
+    <ul class="list-group list-group-numbered">
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">İlköğretim</div>
+                İlköğretimime Ahmet Sezer İlköğretim Okulunda başladım burada 2 sene okudum daha sonra okul ortaokul
+                oldu bu yüzden dolayı Meserret İnel İlkokuluna geçiş yaptım. Burada 3 ve 4. sınıf eğitimimi aldıktan
+                sonra oratokul eğitimim için Ahmet Sezer' e geri döndüm ve liseye kadar burada okudum 2018 yılında 97
+                ortalama ile mezun oldum.
+            </div>
+            <span class="badge bg-primary rounded-pill">2010-2018</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Lise</div>
+                Lise eğitimimi 8. sınıftan sonra yapılan LGS' de aldığım sınav puanımla tercih ettiğim Atatürk Lisesinde
+                aldım. Burada 2 yıl temel eğitim üzerine 2 yıl sayısal alanda eğitim gördüm. Lise hayatım boyunca birçok
+                sporsal ve kültürel faaliyetlere katıldım. Buradan da 2023 yılında 95 ortalama ile mezun oldum.
+            </div>
+            <span class="badge bg-primary rounded-pill">2018-2023</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">Üniversite</div>
+                Şuanda Yks' de aldığım puanla tercih ettiğim Sakarya Üniversitesinde Bilgisayar Mühendisliği bölümünde
+                1. sınıfta eğitim görmekteyim.
+            </div>
+            <span class="badge bg-primary rounded-pill">2023-devam</span>
+        </li>
+    </ul>
     <script>
-     var sidemeu = document.getElementById("sidemenu");
 
 
-     function openmenu(){
-        sidemeu.style.right="0";
-     }
-     function closemenu(){
-        sidemeu.style.right="-200px";
-     }
+        var sidemeu = document.getElementById("sidemenu");
 
-</script>
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
 </body>
 
 </html>
