@@ -73,6 +73,41 @@ nav .fa-solid{
 .list-group-item{
     font-size: 16px;
 }
+img {
+    width: 50%; /* Resmin genişliği, sayfanın genişliğinin %50'si kadar olacak */
+    max-width: 900px; /* Resmin maksimum genişliği 900 piksel olacak */
+    display: block; /* Resmi bir blok öğesi olarak yerleştirir, böylece otomatik olarak diğer içeriklerin üzerine ve altına yerleşir */
+    margin: 10px auto; /* Dikey olarak ortalamak için 10 piksel boşluk bırakır */
+    border: 1px solid black; /* Resmin etrafına siyah renkte 1 piksel kalınlığında bir kenarlık ekler */
+    border-radius: 20px; /* Resmin köşelerini yuvarlar */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Resmin altına hafif bir gölge ekler */
+}
+
+    .image-container {
+        text-align: center; /* Resimleri yatayda ortalamak için */
+    }
+
+    #university-img,
+    #door {
+        display: inline-block; /* Resimleri yan yana yerleştirmek için inline-block kullanılır */
+        vertical-align: middle; /* Resimleri dikeyde ortalamak için */
+        margin: 0 20px; /* Sağ ve solunda 5 piksel boşluk bırakır */
+        width: 80%; /* Resmin genişliği, container'ın %50'si kadar olacak */
+        max-width: 600px; /* Resmin maksimum genişliği 400 piksel olacak */
+    }
+    .special-heading {
+        color: blue; /* Başlık rengini mavi yapar */
+        font-size: 24px; /* Başlık boyutunu 24 piksel yapar */
+        text-align: center;/* Diğer özel stiller buraya eklenebilir */
+        font-family: 'Arial', sans-serif; /* Yazı tipi belirleniyor */
+        font-size: 28px; /* Yazı boyutu belirleniyor */
+        text-transform: uppercase; /* Yazılar büyük harfe dönüştürülüyor */
+        letter-spacing: 1px; /* Harfler arası boşluk belirleniyor */
+        margin-bottom: 10px; /* Alt boşluk ekleniyor */ 
+    }
+
+
+
 
 
 @media only screen and (max-width:600px){
