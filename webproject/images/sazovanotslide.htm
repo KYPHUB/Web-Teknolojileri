@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> ESKİŞEHİR BÜYÜKŞEHİR BELEDİYESİ</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-9" />
+    <meta name="description" content="">
+   <meta name="description" content="Eskişehir Büyükşehir Belediyesi Resmi Web Sitesi" />
+<link rel="shortcut icon" href="favicon.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:image" content="https://www.eskisehir.bel.tr/assets/logo.png" />
+    <meta name="twitter:image" content="https://www.eskisehir.bel.tr/assets/logo.png" />
+
+
+    <link href="assets/css/plugins.css" rel="stylesheet">
+    <link href="assets/css/style22.css" rel="stylesheet">
+    <link href="assets/css/diger24.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/css/pgwslider.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        //$('.body-inner').multiscroll();
+        checkPosition();
+
+        //tab menuler için
+        var url = window.location.href;
+        if (url.match('#')) {
+            $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show')
+        } else {
+            $('.nav-tabs a:first').tab('show');
+        }
+
+        $('#dynamic_select').on('change', function() {
+            var url = $(this).val(); // get selected value
+            if (url) { // require a URL
+                window.location = url; // redirect
+            }
+            return false;
+        });
+
+        // SVG image gösterme
+
+        jQuery('img.svg').each(function() {
+            var $img = jQuery(this);
+            var imgID = $img.attr('id');
+            var imgClass = $img.attr('class');
+            var imgURL = $img.attr('src');
+
+            jQuery.get(imgURL, function(data) {
+                // Get the SVG tag, ignore the rest
+                var $svg = jQuery(data).find('svg');
+
+                // Add replaced image's ID to the new SVG
+                if (typeof imgID !== 'undefined') {
+                    $svg = $svg.attr('id', imgID);
+                }
+                // Add replaced image's classes to the new SVG
+                if (typeof imgClass !== 'undefined') {
+                    $svg = $svg.attr('class', imgClass + ' replaced-svg');
+                }
+
+                // Remove any invalid XML tags as per http://validator.w3.org
+                $svg = $svg.removeAttr('xmlns:a');
+
+                // Replace image with new SVG
+                $img.replaceWith($svg);
+
+            }, 'xml');
+
+        });
+    });
+
+    //telefonlara özel header
+    function checkPosition() {
+        if (window.matchMedia('(max-width: 767px)').matches) {
+            console.log("mobil cihaz");
+            $('#header').attr('data-transparent', 'false');
+
+        }
+    }
+    </script>
+
+    <script>
+    function openSearch() {
+        document.getElementById("mylayout").style.display = "block";
+    }
+
+    function closeSearch() {
+        document.getElementById("mylayout").style.display = "none";
+    }
+    </script>
+
+    <script>
+    $(document).ready(function() {
+        $("div .INDmenuFooter").hide();
+        $("select #INDlangsCombo").hide();
+    });
+    </script>
+
+    <style>
+    p {
+        font-size: 15px !important;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-family: 'Varela Round', helvetica, arial;
+    }
+
+    @media (max-width:600px) {
+        .logocuk {
+            max-width: 190px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-left: 20px;
+        }
+    }
+
+    @media (min-width: 992px){
+    .adsarea{visibility:hidden; display:none !important;}
+}
+    </style>
+
+</head>
+            
+<body>
+
+<!--
+<div class="mfp-container mfp-s-ready mfp-inline-holder"><div class="mfp-content"><div id="modal-auto-open" class="modal modal-auto-open modal-active" data-delay="1" data-cookie-enabled="true" data-cookie-name="Cookiessyenisa">
+            <center>
+                <a href="#">
+                    <img src='img_genel/halk1.jpg' style='width:99%' />
+                </a>
+            </center>
+            <p style="float:right !important"></p><br>
+            <br><br>
+            <center>
+                <a class="btn btn-light modal-close" href="#" style="width:80%;">KAPAT</a> </center>
+            <button title="Close (Esc)" type="button" class="mfp-close">×</button></div></div><div class="mfp-preloader">Loading...</div></div>
+
+-->
+
+
+<!--
+<div class="mfp-container mfp-s-ready mfp-inline-holder"><div class="mfp-content"><div id="modal-auto-open" class="modal modal-auto-open modal-active" data-delay="1" data-cookie-enabled="true" data-cookie-name="Cookiess">
+<center>
+    <a href="img_genel/semp_alt.jpg">
+<img src='img_genel/semp_on.jpg' style='width:99%' />
+</a>
+</center>
+<p style="float:right !important"></p><br>
+<br><br>
+<center>
+<a class="btn btn-light modal-close" href="#" style="width:80%;">KAPAT</a> </center>
+<button title="Close (Esc)" type="button" class="mfp-close">×</button></div></div><div class="mfp-preloader">Loading...</div></div>
+
+
+
+
+
+<div class="mfp-container mfp-s-ready mfp-inline-holder"><div class="mfp-content"><div id="modal-auto-open" class="modal modal-auto-open modal-active" data-delay="1" data-cookie-enabled="true" data-cookie-name="Cookiessasdadada2222">
+<center>
+    <a href="https://forms.gle/MLUukX3E2DmK4Jyr5" target="_blank">
+<img src='img_genel/vlk01.jpg' style='width:99%' />
+</a>
+</center>
+<p style="float:right !important"></p><br>
+
+<center>
+<a class="btn btn-light modal-close" href="#" style="width:80%;">KAPAT</a> </center>
+<button title="Close (Esc)" type="button" class="mfp-close">×</button></div></div><div class="mfp-preloader">Loading...</div></div>
+-->
+
+
+
+
+
+
+    <!-- Body Inner -->
+    <div class="body-inner">
+
+
+        <!-- Topbar -->
+        <div id="topbar" class=" topbar-transparent dark   d-none d-xl-block  ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4">
+
+                    </div>
+
+
+                    <div class="col-md-6 d-none d-sm-block">
+
+
+                        <div class="social-icons social-icons-colored-hover">
+                            <div class="header-extras"
+                                style="position:absolute; margin-left:-200px; margin-top:9px; line-height:20px; max-height:20px; letter-spacing: 1px">
+                                <center>
+                                    <a href="http://ge.eskisehir.bel.tr" class="footer_lnk "><span class="yeniFont2"
+                                            style="color:white;">ENGELSİZ WEB SİTESİ</span></a>
+                                </center>
+                            </div>
+                            <!--
+                                                    <div class="header-extras" style="position:absolute; margin-left:-172px; margin-top:32px">
+                                                        <center>
+                                                            <a href="http://ge.eskisehir.bel.tr" class="footer_lnk" style="color:white; font-size:11px; float:right !important;">Site Haritası</a>
+                                                        </center>
+                                                    </div>
+                        -->
+
+                            <ul>
+
+                                <li class="social-facebook"><a href="https://www.facebook.com/eskisehirbb/"
+                                        target="_blank" t><i class="fab fa-facebook-f" style='font-size:20px;'></i></a>
+                                </li>
+                                <li class="social-twitter"><a href="https://twitter.com/eskisehirbb" target="_blank"><i
+                                            class="fab fa-twitter" style='font-size:20px;'></i></a></li>
+                                <li class="social-instagram"><a href="https://www.instagram.com/eskisehirbb/"
+                                        target="_blank"><i class="fab fa-instagram" style='font-size:20px;'></i></a>
+                                </li>
+
+                                <li class="social-youtube"><a
+                                        href="https://www.youtube.com/channel/UCtpp2WH-fEc2HHseEKpfZDA"
+                                        target="_blank"><i class="fab fa-youtube" style='font-size:20px;'></i></a></li>
+
+                                <li class="social-vimeo"><a href="https://t.me/eskisehirbb" target="_blank"><i
+                                            class="fab fa-telegram" style='font-size:20px;'></i></a></li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end: Topbar -->
+
+        <!-- Header -->
+        <header id="header" data-transparent="true" class="dark submenu-light">
+            <!-- style='background: rgba(4, 33, 75, 0.3);' -->
+            <div class="header-inner" style='background: rgba(4, 33, 75, 0.8);'>
+                <div class="container">
+                    <!--Logo-->
+                    <div id="logo">
+                        <a href="index.php">
+                            <!--
+                        <span class="logo-default"> <img src="assets/images/logo.png" />
+                        </span>
+                    -->
+
+                            <span class="logo-dark"> <img class='logocuk' src="assets/logo.png" height="auto" /></span>
+
+                        </a>
+                    </div>
+                    <!--End: Logo-->
+                    <!-- Search -->
+                    <div id="search">
+                        <a id="btn-search-close" class="btn-search-close" aria-label="Close search form light">
+                            <i class=" fa-times fas fas fa-3x" style="font-size:30px;"></i></a>
+                        <form class="search-form" action="arama" method="post">
+                            <input class="form-control grey" name="kelime" type="text" placeholder="Arama " />
+                            <input type='submit' value='ARAMA YAP' style='color:White'>
+                        </form>
+                    </div> <!-- end: search -->
+
+                    <div class="header-extras">
+                        <ul>
+                            <li><a id="btn-search" href="#"> <i class=" fa-search fas fas fa-3x"
+                                        style='font-size:30px;'></i><span
+                                        style='margin-left:10px; font-size:16px; margin-top:-21px; color:#fff'>ARA</span></a>
+                            </li>
+                            <!--Dil Seçenekleri Gizle
+                        <li>
+                            <div class="p-dropdown"> <a href="#"><i class="icon-globe"></i><span style='font-size:11px; margin-top:-10px;'>TR</span></a>
+                                <ul class="p-dropdown-content">
+                                    <li><a href="#">English</a></li>
+                                    <li><a href="#">Türkçe</a></li>
+
+                                </ul>
+                            </div>
+                        </li>
+                         -->
+                        </ul>
+                    </div>
+
+                    <div id="mainMenu-trigger"><a class="lines-button x"><span class="lines"></span></a></div>
+                    <style>
+                    @media screen and (max-width: 767px) {
+                        .yenifont2 {
+
+                            font-size: 24px !important;
+
+                        }
+                    }
+                    </style>
+
+
+                    <!--end: Navigation Resposnive Trigger-->
+                    <!--Navigation-->
+                    <div id="mainMenu" class="menu-center">
+                        <div class="container">
+
+                            <nav>
+                                <ul>
+                                    <li><a href="index.php" title="ANASAYFA"> ANASAYFA </a></li>
+
+              
+              
+
+
+
+              
+                                    <li class="dropdown mega-menu-item"><a href="#"
+                                            title="Av. Ayşe Ünlüce">BAŞKAN</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="mega-menu-content baskanArkaPlan" style="padding-bottom:35px">
+
+
+
+
+                                                
+   <div class=" list-5">
+                                                <ul class="row no-gutters list-5 ">
+
+
+
+                                                    
+                                                    <li class="col-xs-8 col-sm-6 col-md-4">
+                                                    
+                                                        <a href="baskan-biyografi"> <span
+                                                                class="yeniFont2">BİYOGRAFİ</span></a>
+                                                             
+                                                    </li>
+
+                                                    
+                                                    <li class="col-xs-8 col-sm-6 col-md-4">
+                                                    
+                                                        <a href="baskan-mesaj"> <span
+                                                                class="yeniFont2">İLETİŞİM</span></a>
+                                                             
+                                                    </li>
+
+                                                    
+                                                </ul>
+                                                    </div>
+                                                <div class='mobilSosyal' style="margin-top:145px">
+                                                    <div class="header-social">
+                                                        <a href="https://www.facebook.com/ayseunlucee"
+                                                            target="_blank" title="Facebook"
+                                                            style="background-color:#4463A4; ">
+                                                            <svg class="svg-inline--fa fa-facebook-f fa-w-9"
+                                                                aria-hidden="true" data-prefix="fab"
+                                                                data-icon="facebook-f" role="img"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 264 512"
+                                                                data-fa-i2svg="">
+                                                                <path fill="currentColor"
+                                                                    d="M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229">
+                                                                </path>
+                                                            </svg>
+                                                            <!-- <i class="fab fa-facebook-f"></i> -->
+                                                        </a>
+                                                        <a href="https://twitter.com/ayseunluce" target="_blank"
+                                                            title="Twitter" style="background-color:#1DA1F3">
+                                                            <svg class="svg-inline--fa fa-twitter fa-w-16"
+                                                                aria-hidden="true" data-prefix="fab" data-icon="twitter"
+                                                                role="img" xmlns="http://www.w3.org/2000/svg"
+                                                                viewBox="0 0 512 512" data-fa-i2svg="">
+                                                                <path fill="currentColor"
+                                                                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                                                                </path>
+                                                            </svg>
+                                                            <!-- <i class="fab fa-twitter"></i> -->
+                                                        </a>
+                                                        <a href="https://www.instagram.com/ayseunluce"
+                                                            target="_blank" title="İnstagram"
+                                                            style="background-color:#DE4D6F">
+                                                            <svg class="svg-inline--fa fa-instagram fa-w-14"
+                                                                aria-hidden="true" data-prefix="fab"
+                                                                data-icon="instagram" role="img"
+                                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                                                data-fa-i2svg="">
+                                                                <path fill="currentColor"
+                                                                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                                                </path>
+                                                            </svg>
+                                                            <!-- <i class="fab fa-instagram"></i> -->
+                                                        </a>
+
+                                                        <a href="https://www.youtube.com/@ayseunluce"
+                                                            target="_blank" title="Youtube"
+                                                            style="background-color:red">
+                                                         <i class="fab fa-youtube"></i>
+                                                        </a>
+
+
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown mega-menu-item"><a href="#" title="KURUMSAL"> KURUMSAL</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="mega-menu-content">
+
+
+                                                <div class=" list-5">
+
+                                                    
+                                                    <ul class="row no-gutters">
+
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="eski-baskanlar"> <span
+                                                                    class="yeniFont2">ESKİ BAŞKANLAR</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="meclis-uyeleri"> <span
+                                                                    class="yeniFont2">MECLİS ÜYELERİ</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="komisyonlar"> <span
+                                                                    class="yeniFont2">KOMİSYONLAR</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="etik-komisyonu"> <span
+                                                                    class="yeniFont2">ETİK KOMİSYONU</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="arabuluculuk-komisyonu"> <span
+                                                                    class="yeniFont2">ARABULUCULUK KOMİSYONU</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="idari-sema"> <span
+                                                                    class="yeniFont2">İDARİ ŞEMA</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="vizyonumuz-ve-misyonumuz"> <span
+                                                                    class="yeniFont2">VİZYON VE MİSYON</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="stratejik-plan"> <span
+                                                                    class="yeniFont2">STRATEJİK PLAN</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="mevzuat"> <span
+                                                                    class="yeniFont2">MEVZUAT</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="ic-kontrol"> <span
+                                                                    class="yeniFont2">İÇ KONTROL</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="yetki-ve-sorumluluklar"> <span
+                                                                    class="yeniFont2">YETKİ VE SORUMLULUKLAR</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="yonergeler"> <span
+                                                                    class="yeniFont2">BAŞVURU VE BELGELER</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="belediye-sirketleri"> <span
+                                                                    class="yeniFont2">BELEDİYE ŞİRKETLERİ</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""  href="logolar"> <span
+                                                                    class="yeniFont2">LOGOLAR</span></a>
+                                                        </li>
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target="_blank"  href="https://ik.eskisehir.bel.tr/"> <span
+                                                                    class="yeniFont2">CV BANKASI</span></a>
+                                                        </li>
+                                                        
+
+
+                                                    </ul>
+                                                </div>
+
+
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+
+
+
+
+                                    <li class="dropdown mega-menu-item"><a href="#" title="KURUMSAL"> GÜNCEL</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="mega-menu-content">
+
+                                                                                                <div class=" list-5">
+                                                    <ul class="row no-gutters">
+
+
+
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target="" href="tum-haberler" > <span
+                                                                    class="yeniFont2">HABERLER</span></a>
+                                                        </li>
+
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target="" href="tum-duyurular" > <span
+                                                                    class="yeniFont2">DUYURULAR</span></a>
+                                                        </li>
+
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target="" href="tum-etkinlikler" > <span
+                                                                    class="yeniFont2">ETKİNLİKLER</span></a>
+                                                        </li>
+
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target="" href="bizim_sehir.php?menu_id=41" > <span
+                                                                    class="yeniFont2">BİZİM ŞEHİR BÜLTENİ</span></a>
+                                                        </li>
+
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target="" href="ihale-ilanlari" > <span
+                                                                    class="yeniFont2">İHALE İLANLARI</span></a>
+                                                        </li>
+
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target="" href="imar-planlari" > <span
+                                                                    class="yeniFont2">İMAR PLANI İLANLARI</span></a>
+                                                        </li>
+
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target="" href="yayinlarimiz" > <span
+                                                                    class="yeniFont2">YAYINLARIMIZ</span></a>
+                                                        </li>
+
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target="" href="tum-parselasyon-planlari" > <span
+                                                                    class="yeniFont2">PARSELASYON PLANI İLANLARI</span></a>
+                                                        </li>
+
+                                                                                                                <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target="_blank" href="https://www.ilan.gov.tr/ilan/tum-ilanlar?aci=41" > <span
+                                                                    class="yeniFont2">İLAN PORTALI</span></a>
+                                                        </li>
+
+                                                        
+
+                                                    </ul>
+                                                </div>
+
+
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li class="dropdown mega-menu-item"><a href="#" title="KURUMSAL"> BİLGİ EDİNME</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="mega-menu-content">
+
+                                                                                                <div class=" list-5">
+                                                    <ul class="row no-gutters">
+
+
+                                                        
+
+                                                        <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target="_blank"
+                                                                href="https://interactive.eskisehir.bel.tr"> <span
+                                                                    class="yeniFont2">BİLGİ EDİNME</span></a>
+                                                        </li>
+
+                                                        
+
+                                                        <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target="_blank"
+                                                                href="https://interactive.eskisehir.bel.tr"> <span
+                                                                    class="yeniFont2">DİLEK VE ŞİKAYETLER</span></a>
+                                                        </li>
+
+                                                        
+
+                                                        <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""
+                                                                href="performans-programi"> <span
+                                                                    class="yeniFont2">PERFORMANS PROGRAMI</span></a>
+                                                        </li>
+
+                                                        
+
+                                                        <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""
+                                                                href="faaliyet-raporlari"> <span
+                                                                    class="yeniFont2">FAALİYET RAPORLARI</span></a>
+                                                        </li>
+
+                                                        
+
+                                                        <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""
+                                                                href="kamu-hizmet-standarti"> <span
+                                                                    class="yeniFont2">KAMU HİZMET STANDARTLARI</span></a>
+                                                        </li>
+
+                                                        
+
+                                                        <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""
+                                                                href="belediye-meclis-kararlari"> <span
+                                                                    class="yeniFont2">MECLİS KARARLARI</span></a>
+                                                        </li>
+
+                                                        
+
+                                                        <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""
+                                                                href="saydamlik-ve-hesapverilebilirlik"> <span
+                                                                    class="yeniFont2">SAYDAMLIK VE HESAPVERİLEBİLİRLİK</span></a>
+                                                        </li>
+
+                                                        
+
+                                                        <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""
+                                                                href="kvkk"> <span
+                                                                    class="yeniFont2">K.V.K.K VE BİLGİ GÜVENLİĞİ   </span></a>
+                                                        </li>
+
+                                                        
+
+                                                        <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a target=""
+                                                                href="belediye-meclis-uyesi-nasil-olunur"> <span
+                                                                    class="yeniFont2">BELEDİYE MECLİS ÜYESİ NASIL OLUNUR?</span></a>
+                                                        </li>
+
+                                                        
+
+                                                    </ul>
+                                                </div>
+
+
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+
+
+
+<!--style='display:none' -->
+
+
+
+                                <li class="dropdown mega-menu-item md-hidden adsarea"><a href="#" title="HIZLI MENÜ"> HIZLI MENÜ</a>
+                                        <ul class="dropdown-menu ">
+                                            <li class="mega-menu-content">
+
+
+                                                <div class=" list-5">
+
+
+
+                                                    <ul class="row no-gutters">
+
+                                                        <li class="col-xs-8 col-sm-6 col-md-4">
+                                                            <a href="https://interactive.eskisehir.bel.tr/#/home" target='_blank'> <span
+                                                                    class="yeniFont2">ONLINE HİZMETLER</span></a>
+                                                                    </li>
+                   <li class="col-xs-8 col-sm-6 col-md-4">
+                                                          <a href="heskart-islemleri"> <span
+                                                                    class="yeniFont2">ESKART İŞLEMLERİ</span></a>
+</li>
+
+                   <li class="col-xs-8 col-sm-6 col-md-4">
+                                                          <a href="https://smartcity.eskisehir.bel.tr/" target='_blank'> <span
+                                                                    class="yeniFont2">AKILLI ŞEHİRCİLİK</span></a>
+</li>
+                                                                      
+                                                                                         <li class="col-xs-8 col-sm-6 col-md-4">
+                                                                       <a href="https://kentseldonusum.eskisehir.bel.tr/" target='_blank'> <span
+                                                                    class="yeniFont2">KENTSEL DÖNÜŞÜM</span></a> </li>
+
+
+                                                                          <li class="col-xs-8 col-sm-6 col-md-4">   <a href="hizmetler-detay-2"> <span
+                                                                    class="yeniFont2">KÜLTÜR - SANAT</span></a> </li>
+
+                                                                        <li class="col-xs-8 col-sm-6 col-md-4">   <a href="hizmetler-detay-3"> <span
+                                                                    class="yeniFont2">SAĞLIK HİZMETLERİ</span></a> </li>
+                                                            
+                                                                              <li class="col-xs-8 col-sm-6 col-md-4"> <a href="hizmetler-detay-4"> <span
+                                                                    class="yeniFont2">SOSYAL BELEDİYECİLİK</span></a> </li>
+
+    
+                       <li class="col-xs-8 col-sm-6 col-md-4">
+     <a href="hizmetler-detay-5"> <span
+                                                                    class="yeniFont2">SPOR</span></a> </li>
+                      <li class="col-xs-8 col-sm-6 col-md-4">   <a href="hizmetler-detay-6"> <span
+                                                                    class="yeniFont2">ULAŞIM</span></a> </li>
+
+                       <li class="col-xs-8 col-sm-6 col-md-4"> <a href="https://interactive.eskisehir.bel.tr/#/login?redirectTo=%2Fmodules%2Fortak%2Fborclar" target='_blank'> <span
+                                                                    class="yeniFont2">BORÇ SORGULAMA</span></a> </li>
+
+                   <li class="col-xs-8 col-sm-6 col-md-4">
+     <a href="https://interactive.eskisehir.bel.tr/mebis/" target='_blank'> <span
+                                                                    class="yeniFont2">MEZARLIK BİLGİ SİSTEMİ</span></a></li>
+
+
+                                          <li class="col-xs-8 col-sm-6 col-md-4">                                             
+     <a href="https://www.turkiye.gov.tr/eskisehir-buyuksehir-belediyesi" target='_blank'> <span
+                                                                    class="yeniFont2">E-DEVLET</span></a> </li>
+
+                   <li class="col-xs-8 col-sm-6 col-md-4">
+    <a href="hal-fiyatlari"> <span
+                                                                    class="yeniFont2">HAL FİYATLARI</span></a> </li>
+
+                   <li class="col-xs-8 col-sm-6 col-md-4">
+    <a href="tarifeler"> <span
+                                                                    class="yeniFont2">TARİFELER</span></a> </li>
+
+                   <li class="col-xs-8 col-sm-6 col-md-4">
+    <a href="otobus-saatleri"> <span
+                                                                    class="yeniFont2">OTOBÜS SAATLERİ</span></a> </li>
+
+
+                         <li class="col-xs-8 col-sm-6 col-md-4">                                                        
+     <a href="http://www2.estram.com.tr/HareketSaatleri" target='_blank'> <span
+                                                                    class="yeniFont2">TRAMVAY SAATLERİ</span></a> </li>
+
+
+                   <li class="col-xs-8 col-sm-6 col-md-4">
+    <a href="minibus-guzergahlari"> <span
+                                                                    class="yeniFont2">MİNİBÜS GÜZERGAHLARI</span></a> </li>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    </ul>
+                                                </div>
+
+
+                                            </li>
+                                        </ul>
+                                    </li>
+
+
+
+
+
+
+
+
+
+
+
+
+                                    <li><a href="iletisim" title="İLETİŞİM">İLETİŞİM</a></li>
+
+
+                            </nav>
+                        </div>
+                    </div>
+                    <!--end: Navigation-->
+
+
+                </div>
+            </div>
+        </header>
+        <!-- end: Header -->
+
+
+        
+
+        <style>
+    .horizontal-scroll {
+  overflow: hidden;
+  overflow-x: auto;
+  clear: both;
+  width: 100%;
+}
+
+.my-table {
+  min-width: rem-calc(640);
+}
+    </style>
+
+ <style id="compiled-css" type="text/css">
+      input { 
+	display: none;
+}
+
+.tab-link {
+	text-transform: uppercase;
+	text-align: center;
+	cursor: pointer;
+	display: block;
+	float: left;
+	width: 50%;
+	padding: 15px 0;
+	background: #eee;
+}
+
+article.tab {
+    padding: 20px;
+    background: #ddd;    
+}
+
+#tab-B:not(:checked) ~ label:nth-of-type(1) { /* Style tab one selected */ 
+	background: #ddd;
+}
+
+#tab-B:checked ~ label:nth-of-type(2) { /* Style tab two selected */ 
+	background: #ddd;
+}
+
+.tab {
+	clear: both;
+	display: none;
+}
+
+input:nth-of-type(2):not(:checked) ~ .tab:nth-of-type(1),
+input:nth-of-type(2):checked ~ .tab:nth-of-type(2)
+{
+  display: block;
+}
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+
+   <div id="page-title" class="title_bg1 text-light" style='margin-top:-200px; max-height:200px'>
+        <div class="container">
+
+            <div class="page-title">
+                 <h1> SAZOVA BİLİM KÜLTÜR VE SANAT PARKI              </h1>
+            </div>
+
+          <div class="breadcrumb">
+            <ul>
+                <li><a href="index.php">ANASAYFA</a> </li>
+                <li> <a href="#">ESKİŞEHİR TURU</a> </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+
+<div class="inner-page__wrapper" style="margin-top:20px">
+
+                        <script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+<button type="button" class="btn" onclick="goBack()" style='float:right !important; margin-right:110px; margin-top:10px;'>Geri DÖN >></button>
+
+
+
+
+
+
+    <div class="container">
+
+
+        <style>
+        a {
+            color: #202020
+        }
+        </style>
+
+
+
+        <section id="page-content" class="sidebar-right">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-lg-3 d-none d-sm-block">
+
+                        
+
+                        
+
+                        
+
+
+                        
+                        
+
+                        
+
+                                                <div class="accordion accordion-shadow">
+
+
+
+
+    <div class="ac-item ac-active">
+        <h5 class="ac-title"><i class="fas fa-chevron-right"></i> Eskişehir Turu </h5>
+        <div class="ac-content">
+
+            <ul class="list-icon list-icon-arrow">
+
+                <li> <a href="sayfalar.php?sayfalar_id=82"> Yılmaz Büyükerşen
+                        Balmumu Heykeller Müzesi
+                    </a> </li>
+    
+                <li> <a href="sayfalar.php?sayfalar_id=68"> Kentpark
+                    </a> </li>
+                <li> <a href="sayfalar.php?sayfalar_id=57"> Sazova Bilim Kültür ve Sanat Parkı
+                    </a> </li>
+                <li> <a href="sayfalar.php?sayfalar_id=77"> Atatürk Kültür Sanat ve Kongre Merkezi
+                    </a> </li>
+
+                <li> <a href="sayfalar.php?sayfalar_id=78"> Canlı Tarih Sahnesi
+                    </a> </li>
+
+
+                <li> <a href="sayfalar.php?sayfalar_id=80"> Kent Belleği Müzesi
+                    </a> </li>
+
+
+                <li> <a href="sayfalar.php?sayfalar_id=81"> Masal Şatosu
+                    </a> </li>
+
+                           <li> <a href="sayfalar.php?s
+
+                <li> <a href="sayfalar.php?sayfalar_id=56"> Bilim ve Deney Merkezi
+                    </a> </li>
+
+                <li> <a href="sayfalar.php?sayfalar_id=61"> Esbot Turu
+                    </a> </li>
+
+                <li> <a href="sayfalar.php?sayfalar_id=76"> Büyükşehir Belediyesi Sabancı Uzay Evi
+                    </a> </li>
+                <li> <a href="sayfalar.php?sayfalar_id=71"> Senfoni Orkestrası
+                    </a> </li>
+
+                <li> <a href="sayfalar.php?sayfalar_id=70"> Odunpazarı Evleri
+                    </a> </li>
+
+<!--
+                <li> <a href="sayfalar.php?sayfalar_id=74"> Tramvay Turu
+                    </a> </li>
+
+                <li> <a href="sayfalar.php?sayfalar_id=59"> Cumhuriyet Tarihi Müzesi
+                    </a> </li>
+      <li> <a href="sayfalar.php?sayfalar_id=62"> Gondol Turu
+                    </a> </li>
+
+                     <li> <a href="sayfalar.php?sayfalar_id=54"> Porsuk Bulvarı
+                    </a> </li>
+-->
+
+                <li> <a href="sayfalar.php?sayfalar_id=55"> Atlıhan Lületaşı El Sanatları Çarşısı
+                    </a> </li>
+
+
+                <li> <a href="sayfalar.php?sayfalar_id=64"> Haller Gençlik Merkezi
+                    </a> </li>
+
+                <li> <a href="sayfalar.php?sayfalar_id=60"> Devrim Otomobili
+                    </a> </li>
+
+          
+                <li> <a href="sayfalar.php?sayfalar_id=58"> Çağdaş Cam Sanatları Müzesi
+                    </a> </li>
+
+                <li> <a href="sayfalar.php?sayfalar_id=72"> Şehir Tiyatroları
+                    </a> </li>
+
+                <li> <a href="sayfalar.php?sayfalar_id=65"> Hamamlar
+                    </a> </li>
+
+                <li> <a href="sayfalar.php?sayfalar_id=73"> Şehr-i Aşk Adası
+                    </a> </li>
+
+                <li> <a href="sayfalar.php?sayfalar_id=67"> Karikatür Müzesi
+                    </a> </li>
+
+                <li> <a href="sayfalar.php?sayfalar_id=69"> Kurşunlu Cami ve Külliyesi
+                    </a> </li>
+
+                <li> <a href="sayfalar.php?sayfalar_id=75"> Vecihi Hürkuş Havacılık Parkı
+                    </a> </li>
+
+            </ul>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <div class="ac-item">
+        <i style='font-size:15px; position:absolute; margin-top:5px; ' class="fas fa-chevron-right"></i>
+        <a href="tanitim-katalogu" style="color:black">
+            <h5 style="margin-left:30px;">Tanıtım Kataloğu </h5>
+        </a>
+    </div>
+
+    <div class="ac-item">
+        <i style='font-size:15px; position:absolute; margin-top:5px; ' class="fas fa-chevron-right"></i>
+        <a href="istatistiklerle-eskisehir" style="color:black">
+            <h5 style="margin-left:30px;">İstatistiklerle Eskişehir</h5>
+        </a>
+    </div>
+
+
+    <div class="ac-item">
+        <i style='font-size:15px; position:absolute; margin-top:5px; ' class="fas fa-chevron-right"></i>
+        <a href="sosyal-belediyecilik" style="color:black">
+            <h5 style="margin-left:30px;">Sosyal Belediyecilik </h5>
+        </a>
+    </div>
+
+
+    <div class="ac-item">
+        <i style='font-size:15px; position:absolute; margin-top:5px; ' class="fas fa-chevron-right"></i>
+        <a href="etik-komisyonu" style="color:black">
+            <h5 style="margin-left:30px;">Kardeş Şehirler </h5>
+        </a>
+    </div>
+
+
+    <div class="ac-item">
+        <i style='font-size:15px; position:absolute; margin-top:5px; ' class="fas fa-chevron-right"></i>
+        <a href="arabuluculuk-komisyonu" style="color:black">
+            <h5 style="margin-left:30px;">Sıkça Sorulan Sorular </h5>
+        </a>
+    </div>
+
+
+</div>                        
+                        
+
+
+
+
+                    </div>
+
+
+
+                    <div class="content col-lg-9">
+
+                        <div style="margin-left:20px; margin-bottom:50px">
+
+                            <style>
+                            .anakutular {
+
+                                display: block;
+                            }
+
+                            .anakutular br {
+
+                                display: none;
+                            }
+
+
+                            .kutucuklar {
+                                float: left;
+                                min-height: 170px;
+                                min-width: 300px;
+                                max-width: 300px;
+                                padding: 40px;
+                                margin-left: 10px;
+                                margin-right: 10px;
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                                border: 1px solid #dedede;
+                                border-radius: 3px;
+                                text-align: center;
+                            }
+                            </style>
+
+
+
+
+                            
+
+
+                            <p>400.000 metre karelik araziye kurulu olan tematik park, öncesinde ziraat fakültesinin boş araziyken Eskişehir'in en büyük parkı olma özelliğine sahiptir. İçerisinde 1200 kişi kapasiteli tiyatro yapısı bulunmaktadır. Eskiden fabrika işçilerinin ulaşımını sağlayan dekovil treni parkımıza gelen ziyaretçilere nostaljik bir tur fırsatı sağlamaktadır. 25000 metrekarelik gölet su sporları için tasarlanmıştır. Sazova Bilim Kültür ve Sanat Parkı içerisinde ziyaretçilerimizi bekleyen Masal Şatosu, Kalyon Gemisi, Bilim Deney Merkezi, Sabancı Uzayevi, Hayvanat Bahçesi ve Eti Su Altı Dünyası görülmeye değer merkezlerimizdir.</p>
+<p><strong><br />Adres :</strong></p>
+<p>Sazova Mahallesi Ulusal Egemenlik Bulvarı No:209 TEPEBAŞI/ESKİŞEHİR<br /> <br /> <strong>Harita : </strong></p>
+<p><strong> <iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.8953097064123!2d30.47236941537618!3d39.76445887944629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cc1767b841fab7%3A0xd4747015ffd9a92a!2sSazova%20Bilim%20K%C3%BClt%C3%BCr%20ve%20Sanat%20Park%C4%B1!5e0!3m2!1str!2str!4v1628168926195!5m2!1str!2str" width="300" height="150" allowfullscreen="allowfullscreen"></iframe> <br /> <br /> <strong>Fotoğraflar : </strong> </strong></p>
+
+
+                            
+                        <div class="grid-layout grid-3-columns grid-loaded" data-margin="30" data-item="grid-item"
+                            data-lightbox="gallery"
+                            style="position: relative; height: 773.907px; margin-top:50px; max-width:97%;">
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2015-01-07-1420635630.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2015-01-07-1420635630.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2015-01-07-1420635623.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2015-01-07-1420635623.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2015-01-07-1420635622.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2015-01-07-1420635622.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2015-01-07-1420635621.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2015-01-07-1420635621.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2015-01-07-1420635620.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2015-01-07-1420635620.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2015-01-07-1420635619.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2015-01-07-1420635619.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2015-01-07-1420635617.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2015-01-07-1420635617.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2015-01-07-1420635616.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2015-01-07-1420635616.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2015-01-07-1420635615.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2015-01-07-1420635615.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2015-01-07-1420635614.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2015-01-07-1420635614.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2015-01-07-1420635613.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2015-01-07-1420635613.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398949.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398949.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398948.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398948.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398947.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398947.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398946.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398946.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398945.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398945.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398944.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398944.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398943.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398943.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398928.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398928.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398927.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398927.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398926.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398926.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398925.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398925.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398924.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398924.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398923.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398923.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398922.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398922.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398921.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398921.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398919.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398919.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398898.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398898.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398896.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398896.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398895.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398895.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398894.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398894.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398893.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398893.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398892.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398892.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398891.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398891.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398890.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398890.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398889.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398889.jpg"></a>
+                            </div>
+
+
+                            
+
+
+                            <div class="grid-item"
+                                style="padding: 0px 20px 20px 0px; position: absolute; left: 0px; top: 0px;">
+                                <a class="image-hover-zoom" href="img_sayfalar/big_57-2014-12-12-1418398888.jpg"
+                                    data-lightbox="gallery-image"><img
+                                        src="http://www.eskisehir.bel.tr/img_sayfalar/small_57-2014-12-12-1418398888.jpg"></a>
+                            </div>
+
+
+                            
+
+                            <div class="grid-loader"></div>
+                        </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+    </div>
+</div>
+</section>
+
+
+
+ <!--Modal Cookie-->
+        <div id="cookieNotify" class="modal-strip cookie-notify background-dark" data-delay="2000" data-expire="1" data-cookie-name="cookiebar2020_1" data-cookie-enabled="true">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 text-sm-center sm-center sm-m-b-10 m-t-5" style='font-size:13px'>Kullanıcı deneyiminizi geliştirebilmek için çerezler (cookie) kullanmaktayız. Bu web sitesini kullanarak çerezleri kullanmamıza izin vermiş olursunuz.
+ </div>
+                    <div class="col-lg-2 text-right sm-text-center sm-center">
+
+                        <button type="button" class="btn btn-rounded btn-light btn-sm modal-confirm">Onayla</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End: Modal Cookie-->
+
+<footer class="footer" role="cotentinfo">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-row row">
+
+                <div class="footer-col col-lg-8">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="footer-heading">LİNKLER</div>
+                            <div id="footer-navi">
+                                
+                                <ul style="list-style-type: none !important;">
+                                    <li><a href='http://www.eskisehir.gov.tr/'
+                                            style="color:white;font-size:13px; font-family: 'Varela Round', helvetica, arial;" '
+                                            target=' _blank'>ESKİŞEHİR VALİLİĞİ</a>
+                                    </li>
+                                        <li><a href='https://www.eskisehir-eski.gov.tr/'
+                                            style="color:white;font-size:13px; font-family: 'Varela Round', helvetica, arial;" '
+                                            target=' _blank'>ESKİ GENEL MÜDÜRLÜĞÜ</a></li>
+                                    <li><a href='http://www.odunpazari.bel.tr/'
+                                            style="color:white;font-size:13px; font-family: 'Varela Round', helvetica, arial;" '
+                                            target=' _blank'>ODUNPAZARI
+                                            BELEDİYESİ</a></li>
+                                    <li><a href='http://www.tepebasi.bel.tr/'
+                                            style="color:white;font-size:13px; font-family: 'Varela Round', helvetica, arial;" '
+                                            target=' _blank'>TEPEBAŞI
+                                            BELEDİYESİ</a>
+                                    </li>
+                                    <li><a href='http://www.mehmetcik.org.tr/'
+                                            style="color:white;font-size:13px; font-family: 'Varela Round', helvetica, arial;" '
+                                            target=' _blank'>TSK
+                                            MEHMETÇİK VAKFI</a>
+                                    </li>
+                                    <li><a href='http://www.radyo.mgm.gov.tr/'
+                                            style="color:white;font-size:13px; font-family: 'Varela Round', helvetica, arial;" '
+                                            target=' _blank'>METEOROLOJİ RADYOSU</a>
+                                    </li>
+                                    
+                                 
+                                    <li><a href='http://www.eskisehirkulturturizm.gov.tr/TR,70872/unlu-kisiler-ve-eserleri.html'
+                                            style="color:white;font-size:13px; font-family: 'Varela Round', helvetica, arial;" ' target='
+                                            _blank'>ESKİŞEHİR'İN ÜNLÜ
+                                            KİŞİLERİ VE ESERLERİ</a></li>
+                                    <li><a href='http://www.ombudsman.gov.tr/'
+                                            style="color:white;font-size:13px; font-family: 'Varela Round', helvetica, arial;" '
+                                            target=' _blank'>T.C.
+                                            KAMU DENETÇİLİĞİ
+                                            KURUMU</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 ">
+                            <div class="footer-heading">HIZLI MENÜ</div>
+                            <div id="footer-navi">
+                                <ul style="list-style-type: none !important;">
+
+
+
+                                    <li><a href="
+		 
+eskisehir-turu" target="" style="color:white;font-size:13px; font-family: 'Varela Round', helvetica, arial;" '><span>ESKİŞEHİR TURU</span></a></li>
+
+
+                                    <li><a href="
+
+eskisehir-hakkinda" target="" style="color:white;font-size:13px; font-family: ' Varela Round', helvetica, arial;" '><span>ESKİŞEHİR HAKKINDA</span></a></li>
+
+                                    <li><a href="
+		 
+tanitim-katalogu" target="" style="color:white;font-size:13px; font-family: ' Varela Round', helvetica, arial;" '><span>TANITIM KATALOĞU</span></a></li>
+
+                                    <li><a href="
+
+videolar" style="color:white;font-size:13px; font-family: ' Varela Round', helvetica, arial;" '><span>VİDEOLAR</span></a></li>
+
+
+
+                                    <li><a href="https://www.ilan.gov.tr/ilan/tum-ilanlar?aci=41&currentPage=3"  target='_blank' style="color:white;font-size:13px; font-family: ' Varela Round', helvetica, arial;" '><span>RESMİ İLAN PORTALI</span></a></li>
+
+
+                                    <li><a href="
+		 
+istatistiklerle-eskisehir" target="" style="color:white;font-size:13px; font-family: ' Varela Round', helvetica,
+                                            arial;" '><span>İSTATİSTİKLERLE ESKİŞEHİR</span></a>
+                                    </li>
+
+                                    <li><a href="
+		 
+sosyal-belediyecilik" target="_blank" style="color:white;font-size:13px; font-family: ' Varela Round', helvetica,
+                                            arial;" '><span>SOSYAL BELEDİYECİLİK
+                                               </span></a></li>
+
+                                    <li><a href="
+		 
+kardes-sehirler" target="" style="color:white;font-size:13px; font-family: ' Varela Round', helvetica, arial;" '><span>KARDEŞ ŞEHİRLER</span></a></li>
+
+                                    <li><a href="
+		 
+sss" target="_blank"
+                                            style="color:white;font-size:13px; font-family: ' Varela Round', helvetica,
+                                            arial;" '><span>SIKÇA SORULAN SORULAR</span></a></li>
+
+                                    <li><a href="
+
+https://www.eskisehireo.org.tr/eskisehir-nobetci-eczaneler/" target="_blank"
+                                           style="color:white;font-size:13px; font-family: ' Varela Round', helvetica,
+                                            arial;" '><span>NÖBETÇİ ECZANELER</span></a></li>
+
+                                    <li><a href="site-haritasi" target="_blank"
+                                           style="color:white;font-size:13px; font-family: ' Varela Round', helvetica,
+                                            arial;" '><span>SİTE HARİTASI</span></a></li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 md-hidden">
+                            <div class="footer-heading">BAŞKAN</div>
+                            <div id="footer-navi">
+                                <ul style="list-style-type: none !important;">
+
+                                    <li><a href="baskan-biyografi" style="color:white;font-size:13px; font-family: '
+                                            Varela Round', helvetica, arial;" '>BİYOGRAFİ</a></li>
+
+                                   <!-- <li><a href="baskan-oduller" style="color:white;font-size:13px; font-family: '
+                                            Varela Round', helvetica, arial;" '>ÖDÜLLER</a></li>!-->
+
+                                 
+                                    <!--<li><a href="baskan-fotograflar" style="color:white;font-size:13px; font-family: '
+                                            Varela Round', helvetica, arial;" '>FOTOĞRAFLAR</a>
+                                    </li>--!>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        
+                        <div class="col-sm-6 col-md-3">
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-contact col-lg-4">
+                    <div class="footer-logo"><a href="index.php"><img style="margin-left:50px;"
+                                src="assets/img/logo.png" alt="Logo"></a></div>
+                    <p style=" margin-top:70px; display:block; color:white; text-align: justify-all">
+                        <strong style="color:white">Adres :</strong> Arifiye Mah. İkieylül Caddesi No:53<br />
+                    26010     ODUNPAZARI / ESKİŞEHİR
+                    </p>
+                    <div class="footer-contact__numbers">
+
+                        <ul style="list-style-type: none !important; margin-top:-30px;">
+                            <li>
+
+
+
+
+
+
+                                    <a href="mailto:info@eskisehir.bel.tr" style="color:white !important;"><strong style="color:white">E-Posta: </strong>info@eskisehir.bel.tr</a>
+                               <a href="tel:+902222115500" style="color:white !important;"><strong style="color:white">Tel:</strong> +90 222 211 55 00</a>
+
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container flexbox align-center justify-between">
+            <div class="text copyright">Copyright 2021 <strong style="color:white">Eskişehir Büyükşehir Belediyesi</strong></div>
+
+        </div>
+    </div>
+</footer>
+
+<a class="app-scroll" href="javascript:void(0);">
+    <span class="icon"><i class="fas fa-arrow-up"></i></span>
+</a>
+
+<div class="app-overlay"></div>
+
+
+</div>
+<!-- end: Body Inner -->
+
+
+                    <script>
+                    $.noConflict();
+                    jQuery(document).ready(function($) {
+                        $("#tabs").tabs();
+                    });
+                    </script>
+<script>
+    (function(i,s,o,g,r,a,m){i[' GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                                            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new
+                                            Date();a=s.createElement(o),
+                                            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                                            ga('create', 'UA-60910981-1' , 'auto' ); ga('send', 'pageview' ); </script>
+
+                                            <script src="assets/js/plugins.js" charset="iso-8859-9"></script>
+                                            <script src="assets/js/functions.js" charset="iso-8859-9"></script>
+                                            <script src="assets/js/custom.js"></script>
+                                            <script src="assets/jquery.mb.vimeo_player.min.js"></script>
+                                            <script src="assets/js/diger.js"></script>
+                                            <script src="assets/js/pgwslider.min.js"></script>
+
+
+
+                                            </body>
+
+                                            </html>
