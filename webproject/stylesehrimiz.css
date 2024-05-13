@@ -32,7 +32,7 @@ body{
     color: #fff;
     margin-left: 125px;
     text-indent: 10px   ;
-    margin-right: 15px;
+    margin-right: 50px;
     
 }
 .header-text h5{
@@ -46,49 +46,15 @@ body{
     color: #fff;
     margin-left: 125px;
     text-indent: 10px   ;
-    margin-right: 15px;
+    margin-right: 150px;
 
 }
 .header-text ol li{
     color: #fff;
     margin-left: 125px;
 }
-#gezi-balmumu {
-  float: right; /* Sağa yaslanması için */
-  width: 550px; /* Genişliği ayarlayın, istediğiniz boyuta göre değiştirin */
-  margin-top: -200px; /* Listenin üstünde bir boşluk bırakmak için */
-}
 
-#gezi-balmumu li {
-  list-style: none; /* Liste işaretlerini kaldırmak için */
-  margin-bottom: 10px; /* Öğeler arası boşluk eklemek için */
-  margin-right: 50px;
-  font-size: 15px;
-}
 
-#gezi-balmumu li img {
-  width: 100%; /* Resmin genişliğini %100 yaparak konteynırın tamamını kaplamasını sağlar */
-  height: auto; /* Orantılı olarak yüksekliği otomatik ayarlar */
-  border-radius: 15px;
-}
-#gezi-areko {
-    float: right; /* Sağa yaslanması için */
-    width: 550px; /* Genişliği ayarlayın, istediğiniz boyuta göre değiştirin */
-    margin-top: -200px; /* Listenin üstünde bir boşluk bırakmak için */
-  }
-  
-  #gezi-areko li {
-    list-style: none; /* Liste işaretlerini kaldırmak için */
-    margin-bottom: 10px; /* Öğeler arası boşluk eklemek için */
-    margin-right: 50px;
-    font-size: 15px;
-  }
-  
-  #gezi-areko li img {
-    width: 100%; /* Resmin genişliğini %100 yaparak konteynırın tamamını kaplamasını sağlar */
-    height: auto; /* Orantılı olarak yüksekliği otomatik ayarlar */
-    border-radius: 15px;
-  }
 .container{
     padding: 10px 10%;
 }
