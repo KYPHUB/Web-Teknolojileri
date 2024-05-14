@@ -26,13 +26,11 @@ body{
     margin-top: 30px;
     color: red;
 }
-
-
 .header-text p{
     color: #fff;
     margin-left: 125px;
     text-indent: 10px   ;
-    margin-right: 50px;
+    margin-right: 15px;
     
 }
 .header-text h5{
@@ -46,14 +44,13 @@ body{
     color: #fff;
     margin-left: 125px;
     text-indent: 10px   ;
-    margin-right: 150px;
+    margin-right: 15px;
 
 }
 .header-text ol li{
     color: #fff;
     margin-left: 125px;
 }
-
 
 .container{
     padding: 10px 10%;
@@ -92,6 +89,54 @@ nav ul li a::after {
 nav ul li a:hover::after {
     width: 100%;
 }
+.content-section {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 0 20px; /* İçeriklerin kenarlara yapışmaması için padding ekleyin */
+}
+
+.content-section .text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.content-section .image {
+  flex-shrink: 0;
+  margin-right: 300px; /* Resimlerin çok sağa yapışık olmaması için marjin ekleyin */
+  margin-top: -10px;  
+}
+
+.content-section .image img {
+  max-width: 300px; /* Genişliği ihtiyaca göre ayarlayın */
+  height: auto;
+}
+
+/* Liste Öğeleri İçin Marjin Ayarlaması */
+.header-text ul {
+  padding-left: 0; /* Listenin sol tarafındaki varsayılan paddingi kaldır */
+}
+  
+  .header-text ul li {
+    margin-left: 110px; /* Varsayılan marjinleri kaldır */
+    margin-bottom: 5px; /* Liste öğeleri arasındaki boşluğu ayarlayın */
+  }
+  
+  /* Varsayılan Marjinleri Kaldırmak İçin Genel Ayarlamalar */
+  .header-text ul,
+  .header-text li {
+    list-style:disc; /* Liste işaretlerini kaldırmak isterseniz */
+    margin: 0;
+    padding: 0;
+  }
+  .image-caption {
+    text-align: center;
+    margin-top: 5px; /* Fotoğrafın altındaki yazının üst boşluğunu ayarlayın */
+    color: #fff;
+    font-size: 15px;
+}   
+  
+  
 /*-----------------css for small screen------------*/
 nav .fa-solid{
     display: none;
