@@ -1,0 +1,71 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+}
+
+.paragraph {
+  color: white;
+  text-align: center;
+  font-size: large;
+}
+
+.btn-primary {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: darkblue;
+}
+
+.container {
+  padding-top: 50px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.col {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
+  
+}
+
+.img-fluid {
+  display: block;
+  margin-left: auto;
+  margin-right: 300px;
+  width: 80%;
+  max-width: 400px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.img-container img {
+  max-width: 60%;
+  height: auto;
+  margin-left: 310px;
+  margin-top: 20px;
+  /* İstenilen boşluğa göre ayarlayabilirsiniz */
+}

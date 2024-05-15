@@ -90,22 +90,21 @@ nav ul li a:hover::after {
     width: 100%;
 }
 .content-section {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  padding: 0 20px; /* İçeriklerin kenarlara yapışmaması için padding ekleyin */
-}
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
 
-.content-section .text {
-  flex: 1;
-  margin-right: 20px;
-}
+  .content-section .text {
+    flex: 1;
+    margin-right: 20px;
+  }
 
-.content-section .image {
-  flex-shrink: 0;
-  margin-right: 300px; /* Resimlerin çok sağa yapışık olmaması için marjin ekleyin */
-  margin-top: -10px;  
-}
+  .content-section .image {
+    flex-shrink: 0;
+    margin-right: 200px;
+  }
 
 .content-section .image img {
   max-width: 300px; /* Genişliği ihtiyaca göre ayarlayın */
@@ -142,26 +141,45 @@ nav .fa-solid{
     display: none;
 }
 .carousel {
-    height: fit-content;
-    max-width: 800px; /* istediğin genişlik değerini belirle */
-    margin-top:  100px;
-    margin-bottom: 300px;
-    margin-left: 350px;
+    max-width: 60%; /* Slider'ın maksimum genişliğini ayarlayın */
+    margin: 0 auto; /* Slider'ı ortala */
+    margin-top: 100px;
+    margin-bottom: 30px;
 }
 
 .carousel-item img {
-    width: 100%;  /* resimlerin slider genişliğine tam olarak oturmasını sağlar */
-    height: auto; /* oranları korumak için */
+    max-width:   100%; /* Resimlerin maksimum genişliğini ayarlayın */
+    height: auto; /* Oranları korumak için */
 }
 
 .carousel-item {
     text-align: center; /* resimlerin dikey hizalanmasını sağlar */
 }
+.mekan-tanitim {
+    padding: 20px;
+    background-color: hsl(0, 0%, 0%);
+    margin-top: 20px;
+  }
+  
+  .mekan-aciklama {
+    margin-bottom: 20px;
+  }
+  
+  .mekan-aciklama h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .mekan-aciklama p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:700px){
 
     .header-text{
-        margin-top: 100%;
+        margin-top: 10%;
         font-size: 16px;
     }
     .header-text h1{
@@ -192,4 +210,13 @@ nav .fa-solid{
         left: 25px;
         cursor: pointer;
     }
+    .content-section {
+        flex-direction: column; /* Öğeleri dikey olarak sırala */
+      }
+    
+      .content-section .text,
+      .content-section .image {
+        margin-right: 0px; /* Sağ kenar boşluğunu kaldır */
+        margin-left: 100px;
+      }
 }
