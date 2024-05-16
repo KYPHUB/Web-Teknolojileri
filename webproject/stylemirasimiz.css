@@ -1,37 +1,38 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family:'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-body{
+body {
     background: #000000;
-    color: #fff ;
+    color: #fff;
 }
-#header{
+#header {
     width: 100%;
-    height: 100vh;
-    background-size:cover;
+    height: 100px;
+    background-size: cover;
     background-position: center;
 }
-.container{
+.container {
     padding: 10px 10%;
 }
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap:wrap  ;
+    flex-wrap: wrap;
 }
-.logo{
+.logo {
     width: 70px;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
-nav ul li a{
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 16px;
@@ -47,29 +48,68 @@ nav ul li a::after {
     left: 0;
     transition: 0.5s;
 }
-
 nav ul li a:hover::after {
     width: 100%;
 }
-/*-----------------css for small screen------------*/
-nav .fa-solid{
-    display: none;
+nav .fa-solid {
+    display:none;
+}
+.list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color:gray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: 50px;
 }
 
-@media only screen and (max-width:600px){
+.list h3 {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+}
 
-    .header-text{
-        margin-top: 100%;
-        font-size: 16px;
-    }
-    .header-text h1{
-        font-size: 30px;
-    }
-    nav .fa-solid{
+.list h5 {
+    margin-top: 20px;
+    color: #1a1616;
+    font-size: large;
+}
+
+.list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+ 
+}
+
+
+/* Stadyum Özellikleri */
+.list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list ul li {
+    flex: 1 1 45%;
+    margin-bottom: 10px;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    nav .fa-solid {
         display: block;
         font-size: 25px;
+        color:white ;
     }
-    nav ul{
+    nav ul {
         background: #2c0cce;
         position: fixed;
         top: 0;
@@ -80,14 +120,57 @@ nav .fa-solid{
         z-index: 2;
         transition: right 0.4s;
     }
-    nav ul li{
+    nav ul li {
         display: block;
         margin: 25px;
     }
-    nav ul .fa-solid{
+    nav ul .fa-solid {
         position: absolute;
         top: 25px;
         left: 25px;
         cursor: pointer;
     }
+    .content h1 {
+        font-size: 28px;
+    }
+    .content p {
+        font-size: 16px;
+    }
+    .gallery img {
+        width: 100%;
+        max-width: 100%;
+    }
+    .list ul li {
+        flex: 1 1 100%;
+    }
+}
+.content {
+    text-align: center;
+    padding: 50px 10%;
+}
+.content h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: red;
+}
+.content p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
 }

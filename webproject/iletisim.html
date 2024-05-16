@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,17 @@
     <title>Kişisel Portfolio Website</title>
     <link rel="stylesheet" href="styleiletisim.css">
     <script src="https://kit.fontawesome.com/27c32d15b7.js" crossorigin="anonymous"></script>
-   
+
 </head>
+
 <body>
     <div id="header">
         <div class="container">
             <nav>
                 <img src="images/kyrie-irving-logo-kenneth-smith-transparent.png" class="logo">
                 <ul id="sidemenu">
-                    <li><a href="index.html">Anasayfa</a></li>
-                    <li><a href="hakkinda.html">Hakkında</a></li>
+                    <li><a href="index.html">Hakkında</a></li>
+                    <li><a href="hobilerim.html">Hobilerim</a></li>
                     <li><a href="cv.html">Özgeçmiş</a></li>
                     <li><a href="sehrimiz.html">Şehrim</a></li>
                     <li><a href="mirasımız.html">Mirasımız</a></li>
@@ -29,18 +31,42 @@
             </nav>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">İletişime Geçin</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>parlakyigitkerem@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+90 541 143 2358</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form >
+                    <input type="text" name="İsim" placeholder="İsminiz" required>
+                    <input type="email" name="email" placeholder="e-mail adresiniz" required>
+                    <textarea name="Mesaj" rows="6" placeholder="Mesajınız"></textarea>
+                    <button type="submit" class="btn btn2">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    </div>
     <script>
-     var sidemeu = document.getElementById("sidemenu");
+        var sidemeu = document.getElementById("sidemenu");
 
 
-     function openmenu(){
-        sidemeu.style.right="0";
-     }
-     function closemenu(){
-        sidemeu.style.right="-200px";
-     }
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
 
-</script>
+    </script>
 </body>
 
 </html>
