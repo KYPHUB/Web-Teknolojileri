@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Portfolio Website</title>
+    <link rel="stylesheet" href="styleiletisim.css">
+    <script src="https://kit.fontawesome.com/27c32d15b7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/kyrie-irving-logo-kenneth-smith-transparent.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Hakkında</a></li>
+                    <li><a href="hobilerim.html">Hobilerim</a></li>
+                    <li><a href="cv.html">Özgeçmiş</a></li>
+                    <li><a href="sehrimiz.html">Şehrim</a></li>
+                    <li><a href="mirasımız.html">Mirasımız</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                    <li><a href="login.php">Giriş Yap</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">İletişime Geçin</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>parlakyigitkerem@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+90 541 143 2358</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/the.kyp/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/kerempy12222"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/kerem-yunus-parlakyi%C4%9Fit-b57323285/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <div id="app">
+                    <form @submit.prevent="submitForm">
+                        <input type="text" v-model="form.name" placeholder="İsminiz" required>
+                        <input type="text" v-model="form.surname" placeholder="Soyadınız" required>
+                        <input type="email" v-model="form.email" placeholder="E-mail adresiniz" required>
+                        <select v-model="form.age" required>
+                            <option disabled value="">Yaş Aralığı</option>
+                            <option>0-18</option>
+                            <option>19-30</option>
+                            <option>31-50</option>
+                            <option>50+</option>
+                        </select>
+                        <select v-model="form.gender" required>
+                            <option disabled value="">Cinsiyet</option>
+                            <option>Erkek</option>
+                            <option>Kadın</option>
+                        </select>
+                        <textarea v-model="form.message" rows="6" placeholder="Mesajınız"></textarea>
+                        <div v-if="showMessage" class="success-message">
+                            Formunuz başarıyla gönderildi! Form görüntüleme sayfasına yönlendiriliyorsunuz.
+                        </div>
+                        <div class="button-container">
+                            <div v-if="jsValidationMessage"
+                                :class="{'validation-message': true, 'success': jsValidationMessage === 'JS ile form doğrulandı', 'error': jsValidationMessage !== 'JS ile form doğrulandı'}">
+                                {{ jsValidationMessage }}
+                            </div>
+                            <div v-if="vueValidationMessage"
+                                :class="{'validation-message': true, 'success': vueValidationMessage === 'Form doğrulandı', 'error': vueValidationMessage !== 'Form doğrulandı'}">
+                                {{ vueValidationMessage }}
+                            </div>
+                            <button type="button" class="btn" @click="validateFormWithJS" id="js-validation-btn">JS ile
+                                Kontrol Et</button>
+                            <button type="button" class="btn" @click="validateFormWithVue" id="vue-validation-btn">Vue
+                                ile Kontrol Et</button>
+                            <button type="submit" class="btn">Gönder</button>
+                            <button type="button" class="btn" @click="resetForm" id="reset-btn">Temizle</button>
+                        </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+
+            new Vue({
+                el: '#app',
+                data: {
+                    form: {
+                        name: '',
+                        surname: '',
+                        email: '',
+                        age: '',
+                        gender: '',
+                        message: ''
+                    },
+                    showMessage: false,
+                    vueValidationMessage: '',
+                    jsValidationMessage: ''
+                },
+                methods: {
+                    validateFormWithVue() {
+                        if (!this.form.name) {
+                            this.vueValidationMessage = "İsim alanı boş olamaz (vue.js ile kontrol edildi)";
+                            return false;
+                        }
+                        if (!this.form.surname) {
+                            this.vueValidationMessage = "Soyad alanı boş olamaz (vue.js ile kontrol edildi)";
+                            return false;
+                        }
+                        if (!this.form.email || !this.validateEmail(this.form.email)) {
+                            this.vueValidationMessage = "Geçerli bir e-mail adresi girin (vue.js ile kontrol edildi)";
+                            return false;
+                        }
+                        if (!this.form.age) {
+                            this.vueValidationMessage = "Yaş aralığı seçin (vue.js ile kontrol edildi)";
+                            return false;
+                        }
+                        if (!this.form.gender) {
+                            this.vueValidationMessage = "Cinsiyet seçin (vue.js ile kontrol edildi)";
+                            return false;
+                        }
+                        if (!this.form.message) {
+                            this.vueValidationMessage = "Mesaj alanı boş olamaz (vue.js ile kontrol edildi)";
+                            return false;
+                        }
+                        this.vueValidationMessage = "Form doğrulandı (vue.js ile kontrol edildi)";
+                        return true;
+                    },
+                    validateFormWithJS() {
+                        const name = this.form.name;
+                        const surname = this.form.surname;
+                        const email = this.form.email;
+                        const age = this.form.age;
+                        const gender = this.form.gender;
+                        const message = this.form.message;
+
+                        if (!name) {
+                            this.jsValidationMessage = "İsim alanı boş olamaz (javascript ile kontrol edildi)";
+                            return false;
+                        }
+                        if (!surname) {
+                            this.jsValidationMessage = "Soyad alanı boş olamaz (javascript ile kontrol edildi)";
+                            return false;
+                        }
+                        if (!email || !this.validateEmail(email)) {
+                            this.jsValidationMessage = "Geçerli bir e-mail adresi girin (javascript ile kontrol edildi)";
+                            return false;
+                        }
+                        if (!age) {
+                            this.jsValidationMessage = "Yaş aralığı seçin (javascript ile kontrol edildi)";
+                            return false;
+                        }
+                        if (!gender) {
+                            this.jsValidationMessage = "Cinsiyet seçin (javascript ile kontrol edildi)";
+                            return false;
+                        }
+                        if (!message) {
+                            this.jsValidationMessage = "Mesaj alanı boş olamaz (javascript ile kontrol edildi)";
+                            return false;
+                        }
+                        this.jsValidationMessage = "JS ile form doğrulandı (javascript ile kontrol edildi)";
+                        return true;
+                    },
+                validateEmail(email) {
+                    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/i;
+                    return re.test(String(email).toLowerCase());
+                },
+                resetForm() {
+                    this.form.name = '';
+                    this.form.surname = '';
+                    this.form.email = '';
+                    this.form.age = '';
+                    this.form.gender = '';
+                    this.form.message = '';
+                    this.vueValidationMessage = '';
+                    this.jsValidationMessage = '';
+                },
+                submitForm() {
+                    if (this.validateFormWithVue()) {
+                        this.showMessage = true;
+                        setTimeout(() => {
+                            const formData = new URLSearchParams(this.form).toString();
+                            window.location.href = 'formgoruntule.html?' + formData;
+                        }, 2000);
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
