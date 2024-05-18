@@ -108,6 +108,52 @@ nav ul li a:hover::after {
 nav .fa-solid{
     display: none;
 }   
+#movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Filmler arasındaki boşluk */
+  }
+  
+  .movie {
+    background-color: #1c1c1c;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 250px; /* Film kutusu genişliği */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .movie:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+  }
+  
+  .movie img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .movie h2 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    color: #2c0cce;
+  }
+  
+  .movie p {
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  .movie .rating {
+    font-size: 0.9em;
+    color: #ffd700;
+  }
+
 
 @media only screen and (max-width:600px) {
     .header-text {

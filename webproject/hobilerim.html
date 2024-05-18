@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kişisel Portfolio Website</title>
     <link rel="stylesheet" href="stylehobilerim.css">
-    <script src="https://kit.fontawesome.com/27c32d15b7.js" crossorigin="anonymous"></script>
-
+    
 </head>
-
 <body>
     <div id="header">
         <div class="container">
@@ -25,7 +22,6 @@
                     <li><a href="iletisim.html">İletişim</a></li>
                     <li><a href="kaydol.html">Giriş Yap / Kaydol</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
@@ -45,7 +41,6 @@
                 <li>Fitness</li>
             </ul>
         </div>
-
         <div class="interest">
             <h2>Müzik Dinlemek</h2>
             <p>Müzik dinlemek gün içinde bolca yer verdiğim aktivitelerden birisi evde, yolda, okulda kısacası günümün
@@ -58,7 +53,6 @@
                 <li>Semicenk</li>
             </ul>
         </div>
-
         <div class="interest">
             <h2>Dizi/Film İzlemek</h2>
             <p>Çocukluğumdan beri dizi ve film izlemeyi çok severim sinema favori aktivitelerimdendir.</p>
@@ -70,32 +64,33 @@
                 <li>Avengers: Infinity War</li>
             </ul>
         </div>
-
         <div class="interest">
             <h2>Oyun Oynamak</h2>
             <p>Oyun oynamak daha çok son birkaç yıldır yaptığım bir aktivite özellikle bilgisayar oyunlarını konuşacak
                 olursak. Sınav dönemleri harici genelde günde birkaç saat oyun oynarım.</p>
-                <h4>Favori Oyunlarım</h4>
+            <h4>Favori Oyunlarım</h4>
             <ul>
-                <li>Red Dead Redemtion</li>
+                <li>Red Dead Redemption</li>
                 <li>Tomb Raider</li>
                 <li>Call of Duty MW</li>
                 <li>Valorant</li>
             </ul>
         </div>
     </div>
+    
     <script>
         var sidemeu = document.getElementById("sidemenu");
-
-
-        function openmenu() {
-            sidemeu.style.right = "0";
+   
+   
+        function openmenu(){
+           sidemeu.style.right="0";
         }
-        function closemenu() {
-            sidemeu.style.right = "-200px";
+        function closemenu(){
+           sidemeu.style.right="-200px";
         }
-
-    </script>
+   
+   </script>
+    <div id="movies" class="movies"></div>
+    <script src="hobi.js"></script>
 </body>
-
 </html>
