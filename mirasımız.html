@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirasımız - Eskişehirspor</title>
+    <link rel="stylesheet" href="stylemirasimiz.css">
+    <script src="https://kit.fontawesome.com/27c32d15b7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/eseslogo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Hakkında</a></li>
+                    <li><a href="hobilerim.html">Hobilerim</a></li>
+                    <li><a href="cv.html">Özgeçmiş</a></li>
+                    <li><a href="sehrimiz.html">Şehrim</a></li>
+                    <li><a href="mirasımız.html">Mirasımız</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                    <li><a href="login.php">Giriş Yap</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Eskişehirspor-Kırmızı Şimşekler</h1>
+        <p>Eskişehirspor ya da halk arasındaki kısa adıyla Es-Es, 19 Haziran 1965 tarihinde Eskişehir'de kurulan ve
+            bir dönem Süper Lig'de üst sıralarda mücadele etmiş, şu anda ise Bölgesel Amatör Lig'de yer alan Türk spor
+            kulübü. Toplam 6 kupa ile Türkiye'nin en çok kupaya sahip 5. takımı konumundadır. Türkiye'nin Eskişehir
+            ilini temsil etmektedir. Eskişehirspor kulübü şehrin Akademi Gençlik, İdmanyurdu ve Yıldıztepe kulüplerinin
+            birleşmesiyle kurulmuştur. Kulübün renkleri siyah kırmızıdır.</p>
+        <div class="gallery">
+            <img src="images/stadyum.jpg" alt="Eskişehirspor Fotoğraf 1">
+            <img src="images/kadro.webp" alt="Eskişehirspor Fotoğraf 2">
+            <img src="images/nefer.jpg" alt="Eskişehirspor Fotoğraf 3">
+        </div>
+        <div class="audio-player">
+        <h3>Eskişehirspor Marşı</h3>
+        <audio controls>
+            <source src="audio/Eskisehirspor - Marsi.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+        <div class="list">
+            <h3>Takım Kadrosu</h3>
+            <h5>Kaleci</h5>
+            <ul>
+                <li>İhsan Turgut Kirveli</li>
+                <li>Adem Ağaoğlu</li>
+                <li>Erhan Aslan</li>
+                <li>Alican Candemir</li>
+            </ul>
+            <h5>Defans</h5>
+            <ul>
+                <li>Kaan Dorak</li>
+                <li>Cihan Çimen</li>
+                <li>Kaan Aşnaz</li>
+                <li>Hayrettin Cengiz</li>
+                <li>Erdin Üzer</li>
+                <li>Beytullah Çamurlu</li>
+            </ul>
+            <h5>Orta Saha</h5>
+            <ul>
+                <li>Abdulgani Demir</li>
+                <li>Hasan Ulas Uygur</li>
+                <li>Ferhat Kiraz</li>
+                <li>Bedirhan Akcay</li>
+                <li>Sezer Akyüz</li>
+                <li>Berke Çelik</li>
+                <li>Fatih Çakır</li>
+                <li>Emirhan Recep</li>
+            </ul>
+            <h5>Forvet</h5>
+            <ul>
+                <li>Kaan Gul</li>
+                <li>Dogukan Unal</li>
+                <li>Ahmet Barlas</li>
+                <li>Metehan Toprak</li>
+                <li>Hasan Alp Altınoluk</li>
+                <li>Kerem Eryılmaz</li>
+            </ul>
+
+
+            <h3>Stadyum Özellikleri</h3>
+            <ul>
+                <li>Kapasite: 34.930</li>
+                <li>Açık Otopark: 1148 Araç</li>
+                <li>Kapalı Otopark: 502 Araç</li>
+                <li>Loca Sayısı: 54</li>
+            </ul>
+
+        </div>
+    </div>
+
+    
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>

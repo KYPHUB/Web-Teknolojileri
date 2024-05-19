@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/27c32d15b7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/kyrie-irving-logo-kenneth-smith-transparent.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="index.html">Hakkında</a></li>
+                    <li><a href="hobilerim.html">Hobilerim</a></li>
+                    <li><a href="cv.html">Özgeçmiş</a></li>
+                    <li><a href="sehrimiz.html">Şehrim</a></li>
+                    <li><a href="mirasımız.html">Mirasımız</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                    <li><a href="login.php">Giriş Yap</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+
+            <div class="header-text">
+                <h1> Merhaba<br><span> Kerem Yunus Parlakyiğit</span>'in kişisel<br></s>web sitesine hoşgeldiniz <br>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!-- --------------hakkımda--------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/kyrie-irving-logo-kenneth-smith-transparent.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Benim Hakkımda</h1>
+                    <p>Merhaba, ben Kerem Yunus Parlakyiğit. Eskişehirliyim, 18 yaşındayım. Sakarya Üniversitesi
+                        Bigisayar Mühendisliği 1. sınıf öğrencisiyim.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Yetenekler')">Yetenekler</p>
+                        <p class="tab-links" onclick="opentab('Eğitim')">Eğitim</p>
+                        <p class="tab-links" onclick="opentab('Spor Geçmişi')">Spor Geçmişi</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Yetenekler">
+                        <ul>
+                            <li><span>Web Geliştiriciliği</span><br>Web Sitesi Oluşturma/Tasarlama</li>
+                            <li><span>Uygulama Geliştiriciliği</span><br>C# ile Windows için forms uygulamaları</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Eğitim">
+                        <ul>
+                            <li><span>İlköğretim</span><br>Ahmet Sezer İlköğretim Okulu (2011-2019)</li>
+                            <li><span>Lise</span><br>Atatürk Lisesi (2019-2023)</li>
+                            <li><span>Üniversite</span><br>Sakarya Üniverstesi/Bilgisayar Mühendisliği <br> (2023-devam
+                                ediyor)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Spor Geçmişi">
+                        <ul>
+                            <li><span>Basketbol</span><br>Atatürk Lisesi Basketbol Takımı(2019-2023) </li>
+                            <li><span>Tekvando</span><br>Öncü Spor Kulübü (2014-2018)</li>
+                            <li><span>Futbol</span><br>Ahmet Sezer İlköğretim Okulu Futbol Takımı (2015-2018)</li>
+                            <li><span>Fitness</span><br>(2020-...)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------hobilerim--------------->
+    <div id="about">
+        <div class="container">
+            <h1 class="sub-title">Hobilerim</h1>
+            <div class="hobbies-list">
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>Spor Yapmak</h2>
+                    <p>Küçüklüğümden beri sporla iç içe oldum, birçok erkek çocuk gibi futbolla başlayan spor serüvenim
+                        sonrasında yüzme, tekvando, basketbol ve fitness ile devam etti.
+                        şu anda amatör olarak basketbol ve fitness ile ilgilenmeye devam ediyorum.</p>
+                    <a href="hobilerim.html">Daha fazlasını öğrenin</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-computer"></i>
+                    <h2>Müzik Dinlemek</h2>
+                    <p>Müzik dinlemek gün içinde bolca yer verdiğim aktivitelerden birisi evde, yolda, okulda kısacası
+                        günümün
+                        büyük bir kısmında müzik dinlerim.</p>
+                    <a href="hobilerim.html">Daha fazlasını öğrenin</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-dumbbell"></i><i> </i><i class="fa-solid fa-bowl-food"></i>
+                    <h2>Dizi/Film izlemek</h2>
+                    <p>Çocukluğumdan beri dizi ve film izlemeyi çok severim sinema favori aktivitelerimdendir.</p>
+                    <a href="hobilerim.html">Daha fazlasını öğrenin</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------contact-------------- -->
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

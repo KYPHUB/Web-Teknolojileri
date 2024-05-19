@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 70px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #2c0cce;
+    bottom: -5px;
+    left: 0;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav .fa-solid {
+    display: none;
+}
+
+.list {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(58, 53, 53);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: 50px;
+    position: relative; /* Listeyi relative konuma alıyoruz */
+}
+
+
+.list h3 {
+    text-align: center;
+    color: #e0f902; /* Başlıkların rengini değiştirdik */
+    font-size: 30px; /* Font boyutunu büyüttük */
+    text-decoration: underline; /* Başlıkların altını çizdik */
+    margin-bottom: 30px; /* Alt boşluğu artırdık */
+}
+
+.list h5 {
+    margin-top: 30px; /* Üst boşluğu artırdık */
+    color: #ffffff; /* Metin rengini değiştirdik */
+    font-size: 20px; /* Font boyutunu büyüttük */
+}
+
+.list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list li {
+    padding: 15px 0; /* Öğeler arası boşluğu artırdık */
+    color: #ffffff;
+    background-color: #f8f9fa; /* Öğelerin arka plan rengini değiştirdik */
+}
+
+.list ul li:nth-child(odd) {
+    background-color: #ff0000; /* Tek sıraları farklı bir renge boyadık */
+}
+
+.list ul li:nth-child(even) {
+    background-color: #00070f; /* Çift sıraları diğer renge boyadık */
+}
+
+
+.audio-player {
+    background-color: #ff0000;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.audio-player h3 {
+    margin-top: 0;
+    color: #000000;
+    text-align: center;
+}
+
+.audio-player audio {
+    width: 100%;
+    margin-top: 10px;
+    outline: none;
+}
+
+/* Stadyum Özellikleri */
+.list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list ul li {
+    flex: 1 1 45%;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+        color: white;
+    }
+
+    nav ul {
+        background: #2c0cce;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.4s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .gallery img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .list ul li {
+        flex: 1 1 100%;
+    }
+}
+
+.content {
+    text-align: center;
+    padding: 50px 10%;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: red;
+}
+
+.content p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}

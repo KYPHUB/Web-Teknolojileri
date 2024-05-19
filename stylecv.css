@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 70px;
+   
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #2c0cce;
+    bottom: -5px;
+    left: 0;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+nav ul li a:hover {
+    color: #fff; /* Yazı rengini değiştirmeden mavi çizgiyi koru */
+}
+
+/*-----------------css for small screen------------*/
+nav .fa-solid {
+    display: none;
+}
+
+.list-group-numbered {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background: gray !important;
+    background-color: gray;
+    color: gray;
+    border-radius: 15px;
+}
+
+.list-group-numbered,
+.list-group-item {
+    padding: 10px;
+    background-color: rgb(187, 178, 178);
+}
+
+.list-group-item {
+    font-size: 16px;
+}
+
+img {
+    width: 100%; /* Responsive için genişliği %100 yapıyoruz */
+    max-width: 900px;
+    display: block;
+    margin: 10px auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.image-container {
+    text-align: center;
+}
+
+#university-img,
+#door {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px; /* Yanlarda daha az boşluk bırakıyoruz */
+    width: 100%; /* Resmin genişliği %100 olacak */
+    max-width: 600px;
+}
+
+.special-heading {
+    color: blue;
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #2c0cce;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.4s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    .image-container img {
+        width: 100%; /* Küçük ekranlarda genişliği %100 yap */
+        max-width: 100%; /* Maksimum genişliği %100 yap */
+        height: auto; /* Yüksekliği otomatik ayarla */
+    }
+}

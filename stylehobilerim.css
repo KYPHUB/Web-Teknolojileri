@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000000;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 70px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #2c0cce;
+    bottom: -5px;
+    left: 0;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.interests-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* İki kutucuk yan yana gelecek */
+    gap: 20px;
+    padding: 20px;
+}
+
+.interest {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.interest:hover {
+    background-color: #4f4e56;
+}
+
+.interest h2 {
+    color: #2c0cce;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.interest h4 {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.interest p {
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.interest ul {
+    padding-left: 20px;
+}
+
+.interest ul li {
+    color: #fff;
+    font-size: 16px;
+}
+.api-baslık {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #007bff; /* Mavi renk */
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+nav .fa-solid{
+    display: none;
+}   
+#movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Filmler arasındaki boşluk */
+  }
+  
+  .movie {
+    background-color: #1c1c1c;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    width: 250px; /* Film kutusu genişliği */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .movie:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+  }
+  
+  .movie img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .movie h2 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    color: #2c0cce;
+  }
+  
+  .movie p {
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  .movie .rating {
+    font-size: 0.9em;
+    color: #ffd700;
+  }
+
+
+@media only screen and (max-width:600px) {
+    .header-text {
+        margin-top: 100%;
+        font-size: 16px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    nav .fa-solid {
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul {
+        background: #2c0cce;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.4s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+}
