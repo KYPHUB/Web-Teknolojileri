@@ -7,13 +7,13 @@ fetch(url)
   .then(data => {
     const movies = data.results;
     let moviesHTML = '';
-
+ 
     movies.forEach(movie => {
       const movieHTML = `
         <div class="movie">
           <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title}">
           <h2>${movie.title}</h2>
-          <p>${movie.overview}</p>
+          
           <p>Rating: ${movie.vote_average}</p>
         </div>
       `;
@@ -25,3 +25,4 @@ fetch(url)
   .catch(error => {
     console.error('Error fetching data:', error);
   });
+  

@@ -60,24 +60,29 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-.contact-left{
+.contact-left {
     flex-basis: 35%;
 }
-.contact-right{
+
+.contact-right {
     flex-basis: 60%;
 }
-.contact-left p{
+
+.contact-left p {
     margin-top: 30px;
 }
-.contact-left p i{
+
+.contact-left p i {
     color: #2c0cce;
     margin-right: 10px;
     font-size: 25px;
 }
-.social-icons{
+
+.social-icons {
     margin-top: 30px;
 }
-.social-icons a{
+
+.social-icons a {
     text-decoration: none;
     font-size: 25px;
     margin-right: 15px;
@@ -85,14 +90,17 @@ nav ul li a:hover::after {
     display: inline-block;
     transition: transform 0.5s;
 }
-.social-icons a:hover{
+
+.social-icons a:hover {
     color: #2c0cce;
     transform: translateY(-5px);
 }
-.contact-right form{
+
+.contact-right form {
     width: 100%;
 }
-form input, form textarea{
+
+form input, form textarea, form select {
     width: 100%;
     border: 0;
     outline: none;
@@ -103,25 +111,47 @@ form input, form textarea{
     font-size: 18px;
     border-radius: 8px;
 }
-form .btn2{
-    padding: 14px 60px;
+
+form .btn {
+    padding: 14px 20px;
     font-size: 18px;
     margin-top: 20px;
     cursor: pointer;
     border-radius: 8px;
     color: #ffffff;
     background: #2c0cce;
+    margin-right: 10px;
+    transition: background 0.3s;
 }
+
+form .btn:hover {
+    background: #1a1a4b;
+}
+
 /*-----------------css for small screen------------*/
-nav .fa-solid{
+nav .fa-solid {
     display: none;
 }
-
-
-
+.validation-message {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.success {
+    color: green;
+}
+.error {
+    color: rgb(255, 0, 0);
+}
+.success-message {
+    color: green;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.button-container {
+    margin-top: 20px;
+}
 
 @media only screen and (max-width:600px) {
-
     .header-text {
         margin-top: 100%;
         font-size: 16px;
@@ -153,13 +183,14 @@ nav .fa-solid{
         margin: 25px;
     }
 
-    nav ul .fa-solid{
+    nav ul .fa-solid {
         position: absolute;
         top: 25px;
         left: 25px;
         cursor: pointer;
     }
-    .contact-left, .contact-right{
+
+    .contact-left, .contact-right {
         flex-basis: 100%;
     }
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Bilgileri</title>
+    <link rel="stylesheet" href="styleformgoruntule.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Bilgileri</h1>
+        <ul id="form-data">
+            <!-- Form verileri burada görüntülenecek -->
+        </ul>
+    </div>
+    <button class="back-btn" onclick="goBack()">Geri</button>
+
+    <button class="back-btn" onclick="goBack()">Geri</button>
+
+    <script>
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+            const formData = document.getElementById('form-data');
+            const turkceEtiketler = {
+                name: 'İsim',
+                surname: 'Soyisim',
+                email: 'E-posta',
+                age: 'Yaş Aralığı',
+                gender: 'Cinsiyet',
+                message: 'Mesaj'
+            };
+
+            params.forEach((value, key) => {
+                const li = document.createElement('li');
+                const turkceEtiket = turkceEtiketler[key] || key.charAt(0).toUpperCase() + key.slice(1);
+                li.innerHTML = `<strong>${turkceEtiket}:</strong> ${value}`;
+                formData.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>

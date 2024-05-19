@@ -76,7 +76,13 @@ nav .fa-solid{
     margin-bottom: 10px;
     color: #2c0cce;
 }
-
+#login-form input[type="email"] {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 #login-form input[type="text"],
 #login-form input[type="password"] {
     width: 100%;
